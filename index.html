@@ -1,11 +1,39 @@
-<html>
-    <head>
-        <title>Angular Teste</title>
-    </head>
-    <body>
-
-
-        <script src="bower_components/angular/angular.js" charset="utf-8"></script>
-        <script src="bower_components/angular-widget/angular-widget.js" charset="utf-8"></script>
-    </body>
+<html ng-app="myApp">
+<head>
+    <title>Angular Widgets</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="MainCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h2>Widgets</h2>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ng-widget src="'static'"></ng-widget>
+            </div>
+            <div class="col-md-4">
+                <ng-widget src="'myip'"></ng-widget>
+            </div>
+            <div class="col-md-4">
+                <ng-widget options="{title:'The Matrix'}" src="'imdb'"></ng-widget>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <ng-widget src="'add'"></ng-widget>
+            </div>
+            <div class="col-md-4">
+                <ng-widget src="'event'"></ng-widget>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="bower_components/angular-widget/angular-widget.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
 </html>
